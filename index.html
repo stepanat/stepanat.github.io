@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Name and a one-line description -- shows in Google results and link previews -->
+<title>Nataliya Stepanova · NLP PhD Student at the University of Edinburgh</title>
+<meta name="description" content="I am a PhD student in Natural Language Processing at the Univesity of Edinburgh
+  working under the supervision of Björn Ross, Emily Allaway, and Ivan Titov.
+  I research how language models encode and represent generalizations in language ('Xs are Y'),
+  with applications areas ranging from detecting generalizations about people (stereotypes) and in scientific reporting (over-exaggeration of claims).">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --ink: #1b2330;
+    --muted: #5b6676;
+    --rule: #dde2e9;
+    --accent: #1f5a8a;
+    --accent-soft: #e6eef6;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12161c; --surface: #1a2029; --ink: #e4e8ee; --muted: #9aa5b4;
+      --rule: #2b3340; --accent: #7fb3e0; --accent-soft: #1d2b3a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12161c; --surface: #1a2029; --ink: #e4e8ee; --muted: #9aa5b4;
+    --rule: #2b3340; --accent: #7fb3e0; --accent-soft: #1d2b3a;
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: var(--serif); font-size: 1.125rem; line-height: 1.6;
+  }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  img { max-width: 100%; }
+
+  .page {
+    max-width: 1080px; margin: 0 auto; padding: 3rem 1.5rem 4rem;
+    display: grid; grid-template-columns: 260px 1fr; gap: 4rem;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .side { position: sticky; top: calc(2rem + env(safe-area-inset-top, 0px)); align-self: start; }
+  .photo {
+    width: 180px; height: 180px; border-radius: 50%; overflow: hidden;
+    background: var(--accent-soft); display: grid; place-items: center;
+    font-family: var(--serif); font-size: 3.5rem; color: var(--accent);
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .side h1 { font-size: 2rem; line-height: 1.15; font-weight: 500; margin: 1.25rem 0 .35rem; }
+  .side .role { font-family: var(--sans); font-size: .9rem; color: var(--muted); line-height: 1.5; margin: 0 0 1.25rem; }
+  .links { list-style: none; padding: 0; margin: 0; font-family: var(--sans); font-size: .9rem; }
+  .links li { padding: .3rem 0; border-top: 1px solid var(--rule); }
+  .links li:last-child { border-bottom: 1px solid var(--rule); }
+  .links a { text-decoration: none; display: block; }
+  .links a:hover { text-decoration: underline; }
+  .email { font-family: var(--sans); font-size: .85rem; color: var(--muted); margin-top: 1rem; }
+
+  /* ---------- Main ---------- */
+  main { min-width: 0; max-width: 680px; }
+  .seeking {
+    background: var(--accent-soft); border-left: 3px solid var(--accent);
+    padding: 1rem 1.25rem; margin: 0 0 2.5rem; font-size: 1.05rem;
+  }
+  .seeking strong { font-weight: 600; }
+  section { margin-bottom: 3rem; }
+  h2 {
+    font-size: 1.5rem; font-weight: 500; margin: 0 0 1rem;
+    padding-bottom: .4rem; border-bottom: 1px solid var(--rule);
+  }
+  p { margin: 0 0 1rem; }
+
+  .news { list-style: none; padding: 0; margin: 0; }
+  .news li { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; padding: .35rem 0; }
+  .news time { font-family: var(--sans); font-size: .85rem; color: var(--muted); padding-top: .2rem; }
+
+  .pubs { list-style: none; padding: 0; margin: 0; }
+  .pub { padding: 1rem 0; border-bottom: 1px solid var(--rule); }
+  .pub:last-child { border-bottom: 0; }
+  .pub .title { font-weight: 600; font-size: 1.1rem; line-height: 1.35; display: block; }
+  .pub .authors { color: var(--muted); font-size: 1rem; }
+  .pub .authors .me { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  .pub .venue { font-style: italic; font-size: 1rem; }
+  .pub .award { font-family: var(--sans); font-size: .78rem; font-weight: 600; color: var(--accent); margin-left: .4rem; }
+  .pub .actions { font-family: var(--sans); font-size: .82rem; margin-top: .35rem; display: flex; flex-wrap: wrap; gap: .25rem 1rem; align-items: baseline; }
+  .pub details { display: contents; }
+  .pub summary { cursor: pointer; color: var(--accent); list-style: none; }
+  .pub summary::-webkit-details-marker { display: none; }
+  .pub pre {
+    flex-basis: 100%; margin: .5rem 0 0; padding: .75rem 1rem; overflow-x: auto;
+    background: var(--surface); border: 1px solid var(--rule); font-size: .78rem; line-height: 1.5;
+  }
+  .note { font-family: var(--sans); font-size: .82rem; color: var(--muted); }
+
+  .cv { list-style: none; padding: 0; margin: 0; }
+  .cv li { display: grid; grid-template-columns: 1fr auto; gap: .25rem 1rem; padding: .5rem 0; }
+  .cv .what { font-weight: 500; }
+  .cv .when { font-family: var(--sans); font-size: .85rem; color: var(--muted); padding-top: .2rem; }
+  .cv .detail { grid-column: 1 / -1; color: var(--muted); font-size: 1rem; margin-top: -.25rem; }
+
+  footer { font-family: var(--sans); font-size: .8rem; color: var(--muted); }
+
+  @media (max-width: 820px) {
+    .page { grid-template-columns: 1fr; gap: 2rem; padding-top: 2rem; }
+    .side { position: static; display: grid; grid-template-columns: auto 1fr; gap: 0 1.25rem; align-items: center; }
+    .photo { width: 96px; height: 96px; font-size: 2rem; grid-row: span 2; }
+    .side h1 { margin-top: 0; font-size: 1.6rem; }
+    .side .role { margin: 0; }
+    .links, .email { grid-column: 1 / -1; }
+    .links { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin-top: 1.25rem; }
+    .links li, .links li:last-child { border: 0; padding: 0; }
+  }
+  @media (max-width: 480px) {
+    .news li { grid-template-columns: 1fr; gap: 0; }
+    .cv li { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="side">
+    <!-- EDIT: put a square photo named profile.jpg next to this file. Initials show until you do. -->
+    <div class="photo">
+      <img src="profile.jpg" alt="Photo of Nataliya Stepanova" onerror="this.remove()">
+      <span aria-hidden="true">YN</span>
+    </div>
+    <h1>Nataliya Stepanova</h1>
+    <p class="role">PhD student in Informatics (NLP) at the University of Edinburgh.<br>Advised by Björn Ross, Emily Allaway, Ivan Titov.</p>
+    <ul class="links">
+      <li><a href="https://scholar.google.com/citations?user=S9bSlA0AAAAJ&hl=en">Google Scholar</a></li>
+      <li><a href="https://github.com/stepanat">GitHub</a></li>
+      <li><a href=https://www.linkedin.com/in/nataliya-stepanova>LinkedIn</a></li>
+    </ul>
+    <!-- Written this way to slow down spam scrapers -->
+    <p class="email">n.p.stepanova [at] sms.ed.ac.uk </p>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <p class="seeking">
+      <strong>I'm looking for research internships for Summer 2027</strong> in LLM reasoning,
+      evaluation, or alignment. If you think there's a fit, please
+      <a href="n.p.stepamova@sms.ed.ac.uk">email me</a> to request my CV.
+    </p>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        I'm a PhD student (Sept 2025 - present) at the University of Edinburgh, working with
+        <a href="https://sweb.inf.ed.ac.uk/bross3/">Björn Ross</a>,
+        <a href="https://emilyallaway.github.io/">Emily Allaway</a>, and
+        <a href="https://ivan-titov.org/">Ivan Titov</a>.
+        I research how language models encode and represent generalizations in language ('Xs are Y'),
+        with applications generalizations about people (stereotypes) and in scientific reporting (over-exaggeration of claims)."
+      </p>
+      <p>
+        Before my PhD, I worked for 2.5 years as a software engineer with Amazon's Alexa Speech team in Cambridge, UK.
+        I have a Masters in Speech and Language Processing from the University of Edinburgh (2021-2022)
+        and a Bachelors in Mathematics and Computer Science (minor in Linguistics) from the University of Maryland, College Park (2017-2021).
+      </p>
+    </section>
+
+    <!-- <section id="news">
+      <h2>News</h2>
+      <ul class="news">
+        <li><time datetime="2026-09">Sep 2026</time><span>Our paper on contamination-resistant evaluation was accepted to <strong>EMNLP 2026</strong>.</span></li>
+        <li><time datetime="2026-06">Jun 2026</time><span>Started a summer research internship at <a href="#">Company Research</a>.</span></li>
+        <li><time datetime="2026-02">Feb 2026</time><span>Gave a talk on long-context reasoning at the <a href="#">Workshop Name</a>.</span></li>
+      </ul>
+    </section> -->
+
+    <section id="publications">
+      <h2>Selected publications</h2>
+      <p class="note">Full list on <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=S9bSlA0AAAAJ&sortby=pubdate">Google Scholar</a>.</p>
+      <ul class="pubs">
+        <!-- Copy this <li> block for each paper. Wrap your own name in <span class="me">. -->
+        <li class="pub">
+          <a class="title" href="https://arxiv.org/abs/XXXX.XXXXX">The Missing Minimal Pair: Stereotype Evaluation in LLMs</a>
+          <div class="authors"><span class="me">Nataliya Stepanova</span>, Ivan Titov, Emily Allaway, Björn Ross</div>
+          <span class="venue">Under review, 2026</span>
+          <!-- <span class="award">Outstanding paper</span> -->
+          <div class="actions">
+            <a href="https://arxiv.org/pdf/2610.08747">Paper</a>
+            <a href="https://github.com/stepanat/missing-minimal-pair/">Code</a>
+            <!-- <a href="https://huggingface.co/datasets/yourusername/dataset">Data</a> -->
+            <!-- <a href="slides.pdf">Slides</a> -->
+            <details>
+              <summary>BibTeX</summary>
+<pre>@misc{stepanova2026missingminimalpairstereotype,
+title = {The Missing Minimal Pair: Stereotype Evaluation in LLMs},
+author = {Nataliya Stepanova and Ivan Titov and Emily Allaway and Björn Ross},
+year = {2026},
+eprint = {2610.08747},
+archivePrefix = {arXiv},
+primaryClass = {cs.CL},
+url = {https://arxiv.org/abs/2610.08747}, 
+}</pre>
+            </details>
+          </div>
+        </li>
+
+        <li class="pub">
+          <a class="title" href="#">How broad is that claim? Mapping Generalisation in NLP Research</a>
+          <div class="authors">Chenxin Diao, <span class="me">Nataliya Stepanova</span>, Emily Allaway</div>
+          <span class="venue">To appear at EMNLP 2026</span>
+          <div class="actions">
+            <a href="https://arxiv.org/abs/2609.14770">Paper</a>
+            <a href="https://github.com/cx-diao/nlpgen">Code</a>
+            <details>
+              <summary>BibTeX</summary>
+                <pre>@misc{diao2026broadclaimmappinggeneralisation,
+title = {How broad is that claim? Mapping Generalisation in NLP Research},
+author = {Chenxin Diao and Nataliya Stepanova and Emily Allaway},
+year = {2026},
+eprint = {2609.14770},
+archivePrefix = {arXiv},
+primaryClass = {cs.CL},
+url = {https://arxiv.org/abs/2609.14770}
+}</pre>
+            </details>
+          </div>
+        </li>
+
+        <li class="pub">
+          <a class="title" href="#">Concepts in terms of other Concepts: a method for the analysis of collective word use</a>
+          <div class="authors">Gustavo Cilleruelo, <span class="me">Nataliya Stepanova</span>, Emily Allaway, Alexandra Birch</div>
+          <span class="venue">CogSci 2026</span>
+          <div class="actions">
+            <a href="https://arxiv.org/pdf/2609.14770">Paper</a>
+            <details>
+              <summary>BibTeX</summary>
+                <pre>@inproceedings{cilleruelo2026concepts,
+title = {Concepts in terms of other Concepts: a method for the analysis of collective word use},
+author = {Cilleruelo, Gustavo and Stepanova, Nataliya and Allaway, Emily and Birch, Alexandra},
+booktitle = {Proceedings of the Annual Meeting of the Cognitive Science Society},
+volume = {48},
+year = {2026}
+}</pre>
+            </details>
+          </div>
+        </li>
+
+        <li class="pub">
+          <a class="title" href="#">Temporal generalizability in multimodal misinformation detection</a>
+          <div class="authors"><span class="me">Nataliya Stepanova</span>, Björn Ross</div>
+          <span class="venue">GenBench Workshop at EMNLP 2023</span>
+          <div class="actions">
+            <a href="https://aclanthology.org/2023.genbench-1.6.pdf">Paper</a>
+            <details>
+              <summary>BibTeX</summary>
+<pre>@inproceedings{stepanova2023temporal,
+title = {Temporal generalizability in multimodal misinformation detection},
+author = {Stepanova, Nataliya and Ross, Björn},
+booktitle = {Proceedings of the 1st GenBench Workshop on (Benchmarking) Generalisation in NLP},
+pages = {76--88},
+year = {2023}
+}</pre>
+            </details>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <section id="Education">
+      <h2>Education</h2>
+      <ul class="cv">
+        <li>
+          <span class="what">PhD Candidate, University of Edinburgh</span>
+          <span class="when">Sept. 2025 - present</span>
+          <span class="detail">With the School of Informatics (Institute of Language, Cognition and Computation).</span>
+        </li>
+        <li>
+          <span class="what">MSc Speech and Language Processing</span>
+          <span class="when">Sept. 2021 – Aug. 2022</span>
+          <span class="detail">Funded by the <a href="https://www.gov.uk/government/news/marshall-scholarship-winners-2021">Marshall Scholarship</a>,
+            graduated with Distinction.</span>
+        </li>
+        <li>
+          <span class="what">BSc Mathematics, BSc Computer Science</span>
+          <span class="when">Aug. 2017 – May 2021</span>
+          <span class="detail">Minored in Linguistics,
+            funded by the <a href="https://financialaid.umd.edu/resources-policies/bannekerkey-scholarship-policy">Banneker-Key full merit scholarship</a>,
+            graduated Magna Cum Laude with a GPA of 3.98.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <ul class="cv">
+        <li>
+          <span class="what">Software Engineer, Amazon Alexa (Cambridge, UK)</span>
+          <span class="when">Oct. 2022 - May 2024</span>
+          <span class="detail">Worked on integrating, optimizing, and deploying trained Large Language and Speech models into production environment.</span>
+        </li>
+        <li>
+          <span class="what">Software Engineering Intern, Capital One Financial Coroporation (McLean, Virginia, USA)</span>
+          <span class="when">June 2021 – Aug. 2021</span>
+          <span class="detail">Worked on an ML-based SlackBot to automate question answering in Slack support channels.</span>
+        </li>
+        <li>
+          <span class="what">Software Engineering Intern, Capital One Financial Coroporation (McLean, Virginia, USA)</span>
+          <span class="when">June 20210 – Aug. 2020</span>
+          <span class="detail">Designed algorithm using NLP (sentiment extraction) to process agent/customer call and chat interactions to create a “smart note” describing the status of the customer’s refinancing application.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <p>
+        <strong>Teaching assistant:</strong>
+        Text Technologies for Data science (Fall 2025 - present),
+        Accelerated Topics in NLP (Spring 2026),
+        Computational Social Science (Spring 2026)
+        Discrete Mathematics and Probability (Fall 2025)
+      </p>
+    </section>
+
+    <footer>Last updated October 2026.</footer>
+  </main>
+</div>
+</body>
+</html>
